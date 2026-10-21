@@ -443,13 +443,15 @@ export default function App() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <img
-          src="/images/lionel.jfif"
-          alt="Portrait professionnel"
-          className="h-64 w-64 rounded-2xl border border-cyan-400/30 object-cover object-top shadow-lg shadow-cyan-950/30"
-        />
-      </div>
+      
+<div className="flex justify-center">
+  <img
+    src={`${import.meta.env.BASE_URL}images/lionel.jfif`}
+    alt="Portrait professionnel"
+    className="h-64 w-64 rounded-2xl border border-cyan-400/30 object-cover object-top shadow-lg shadow-cyan-950/30"
+  />
+</div>
+
     </div>
   </div>
 </section>
