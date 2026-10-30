@@ -14,241 +14,442 @@ import {
   Menu,
   X,
   Terminal,
+  GraduationCap,
+  LockKeyhole,
+  BookOpen,
 } from 'lucide-react'
-
 
 const content = {
   fr: {
     nav: ['À propos', 'Expérience', 'Compétences', 'Projets', 'Contact'],
-    availability: 'Portfolio en construction',
+    availability: 'Recherche de stage PFE · Janvier 2027',
     greeting: 'BONJOUR, JE SUIS',
-    firstName: 'TILENGAR',
-    lastName: 'Mbaihornom Lionel',
-    role: 'Ingénieur en cybersécurité',
+    firstName: 'Mbaihornom Lionel',
+    lastName: ' TILENGAR',
+    role: 'Élève ingénieur en cybersécurité · 5e année',
     description:
-      "Passionné par la cybersécurité, les réseaux et l'intelligence artificielle. Je conçois et j'étudie des solutions visant à renforcer la sécurité des systèmes et des applications.",
+      "Élève ingénieur en cybersécurité à l'Université Internationale de Rabat, je m'intéresse à la protection des systèmes, des réseaux et des applications contre les cybermenaces. Mon parcours couvre différents domaines de la cybersécurité : sécurité réseau, systèmes, applications web, cryptographie, cloud, IoT et intelligence artificielle appliquée à la détection d'intrusions. Je recherche un stage PFE à partir de janvier 2027.",
     projectsBtn: 'Découvrir mes projets',
     contactBtn: 'Me contacter',
+
     aboutTitle: 'À propos de moi',
     aboutText:
-      "Je développe progressivement mes compétences en sécurité informatique à travers des projets pratiques, des laboratoires techniques et des travaux de recherche. Mon objectif : contribuer à la conception de systèmes numériques plus sûrs et plus résilients.",
-    skillsTitle: 'Domaines techniques',
-    skillsSubtitle: 'Des connaissances que je développe par la pratique.',
-    projectsTitle: 'Projets & explorations',
+      "Élève ingénieur en Génie Informatique, spécialité Cybersécurité à l'Université Internationale de Rabat (UIR), je développe mes compétences à travers des stages, des projets pratiques, des laboratoires techniques et des travaux de recherche. Mon objectif est de contribuer à la protection des infrastructures, des systèmes, des données et des applications numériques.",
+
+    education: 'Formation académique',
+    educationItems: [
+      {
+        degree: 'Cycle ingénieur en Génie Informatique',
+        field: 'Spécialité Cybersécurité · 5e année',
+        school: 'Université Internationale de Rabat (UIR)',
+        location: 'Rabat, Maroc',
+        date: '2022 – en cours',
+      },
+      {
+        degree: 'Baccalauréat scientifique',
+        field: 'Série D',
+        school: 'Collège Horizon International',
+        location: 'Ouagadougou, Burkina Faso',
+        date: '2021 – 2022',
+      },
+      {
+        degree: 'Brevet d’études du premier cycle (BEPC)',
+        field: 'Enseignement secondaire',
+        school: 'Collège Horizon International',
+        location: 'Ouagadougou, Burkina Faso',
+        date: '2018 – 2019',
+      },
+    ],
+
+    experienceTitle: 'Expérience professionnelle',
+    experienceOneTitle:
+      'Développement et tests d’une solution embarquée ESP32',
+    experienceOneDescription:
+      'Travail sur un système embarqué utilisant la connexion Wi-Fi et la communication avec un serveur PHP local via des requêtes HTTP GET. Le travail comprend également l’affichage des données sur une page HTML et le moniteur série, la configuration du Wi-Fi via Bluetooth et l’étude des bases de la mise à jour à distance OTA.',
+    experienceTwoTitle:
+      'Étude comparative de solutions de sécurité réseau',
+    experienceTwoDescription:
+      'Étude de solutions de sécurité réseau dans le contexte d’une infrastructure bancaire. Comparaison de solutions telles que FortiGate et FortiNAC, étude des mécanismes de filtrage, d’inspection et de segmentation réseau, et proposition d’une architecture de sécurité adaptée.',
+    internship: 'Stage',
+    embeddedSystems: 'IoT · Systèmes embarqués',
+    cybersecurityNetworking: 'Cybersécurité · Réseaux',
+    july2024: 'Juillet 2024',
+    julyOctober2025: 'Juillet – octobre 2025',
+
+    skillsTitle: 'Compétences et domaines techniques',
+    skillsSubtitle:
+      'Les différents domaines de la cybersécurité abordés pendant ma formation, mes stages et mes travaux pratiques.',
+    toolsTitle: 'Outils et technologies',
+
+    skills: [
+      'Sécurité des réseaux',
+      'Sécurité des systèmes',
+      'Pentest et Ethical Hacking',
+      'Sécurité des applications web',
+      'Cryptographie et protection des données',
+      'Sécurité cloud',
+      'Supervision et détection des menaces',
+      'Intelligence artificielle appliquée à la cybersécurité',
+      'Sécurité IoT et systèmes embarqués',
+    ],
+
+    projectsTitle: 'Projets, recherche et domaines techniques',
     projectsSubtitle:
-      'Une sélection de domaines et de travaux que je souhaite mettre en valeur dans mon parcours.',
-    items: [
+      'Une présentation de mes projets académiques, de mes travaux de recherche et des différents domaines de la cybersécurité que j’explore.',
+
+    projects: [
       {
         title: 'Détection d’intrusions IoMT par IA',
-        category: 'INTELLIGENCE ARTIFICIELLE',
+        category: 'RECHERCHE EN COURS',
         description:
-          "Étude de méthodes de détection d'attaques sur les réseaux d'objets médicaux connectés, avec un intérêt particulier pour les attaques rares et la réduction des fausses alertes.",
-        tags: ['Python', 'Machine Learning', 'IoMT'],
+          'Étude de méthodes d’intelligence artificielle pour détecter les attaques dans les réseaux d’objets médicaux connectés. Les problématiques étudiées incluent le déséquilibre des classes, la détection des attaques minoritaires et la réduction des faux positifs.',
+        tags: ['Python', 'Machine Learning', 'IoMT', 'Détection d’intrusions'],
         icon: BrainCircuit,
       },
       {
-        title: 'Sécurité réseau & pare-feu',
-        category: 'SÉCURITÉ RÉSEAU',
+        title: 'Sécurité réseau et pare-feu',
+        category: 'EXPÉRIENCE ET TRAVAUX PRATIQUES',
         description:
-          'Conception et étude d’architectures réseau sécurisées, de règles de filtrage et de mécanismes de segmentation.',
-        tags: ['Réseaux', 'Firewall', 'VLAN', 'Fortnet', 'Postman'],
+          'Étude des architectures réseau sécurisées, du filtrage du trafic, de l’inspection et de la segmentation réseau. Exploration des VLAN, pare-feu, VPN, DMZ et environnements de simulation réseau.',
+        tags: ['Réseaux', 'FortiGate', 'FortiNAC', 'VLAN', 'GNS3', 'Cisco Packet Tracer'],
         icon: Network,
       },
       {
-        title: 'Analyse SOC & OpenSearch',
-        category: 'DÉTECTION & SUPERVISION',
+        title: 'Pentest et Ethical Hacking',
+        category: 'PRATIQUE ET APPRENTISSAGE',
         description:
-          "Exploration de journaux de sécurité, création de visualisations et analyse d'indicateurs pour mieux comprendre l'activité réseau.",
-        tags: ['SOC', 'OpenSearch', 'Logs', 'Wireshark'],
-        icon: Activity,
+          'Exploration des techniques de test de sécurité dans des environnements de laboratoire autorisés : reconnaissance, analyse de services, recherche de vulnérabilités et tests de sécurité web.',
+        tags: ['Kali Linux', 'Nmap', 'Metasploit', 'Burp Suite', 'CTF'],
+        icon: LockKeyhole,
       },
       {
-        title: 'Développement web sécurisé',
-        category: 'SÉCURITÉ APPLICATIVE',
+        title: 'Sécurité des applications web',
+        category: 'PROJETS ET TRAVAUX PRATIQUES',
         description:
-          "Développement d'applications et étude des bonnes pratiques de sécurité pour protéger les données et les accès.",
-        tags: ['Web', 'Sécurité', 'Développement'],
+          'Développement web et étude de la protection des applications, des comptes utilisateurs, des rôles et des accès. Étude de vulnérabilités telles que XSS et CSRF dans le cadre des travaux pratiques.',
+        tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'XSS', 'CSRF'],
         icon: Code2,
       },
       {
-        title: 'Cloud & sécurité des applications',
-        category: 'CLOUD SECURITY',
+        title: 'Sécurité des systèmes',
+        category: 'DOMAINE TECHNIQUE',
         description:
-          "Exploration de l'hébergement cloud, du contrôle d'accès et de la protection des données dans les applications.",
-        tags: ['Cloud', 'IAM', 'Protection des données', 'Microsoft Azure'],
+          'Étude de la sécurité des environnements Linux et Windows, des permissions, des services et des configurations système, ainsi que des méthodes de renforcement des systèmes.',
+        tags: ['Linux', 'Ubuntu', 'Kali Linux', 'Windows', 'Hardening'],
+        icon: Terminal,
+      },
+      {
+        title: 'Cryptographie et protection des données',
+        category: 'DOMAINE TECHNIQUE',
+        description:
+          'Étude des principes de confidentialité, d’intégrité, d’authentification et de protection des données, notamment à travers les notions de cryptographie et de sécurité des échanges.',
+        tags: ['Cryptographie', 'Intégrité', 'Authentification', 'RSA'],
+        icon: ShieldCheck,
+      },
+      {
+        title: 'Supervision et détection des menaces',
+        category: 'DOMAINE DE LA CYBERSÉCURITÉ',
+        description:
+          'Découverte des mécanismes de surveillance des événements de sécurité, d’analyse des journaux, d’identification des activités suspectes et de détection et réponse aux incidents.',
+        tags: ['SOC', 'Logs', 'Monitoring', 'Wireshark'],
+        icon: Activity,
+      },
+      {
+        title: 'Sécurité cloud et contrôle des accès',
+        category: 'DOMAINE DE LA CYBERSÉCURITÉ',
+        description:
+          'Exploration des principes de sécurité cloud, de la gestion des identités et des accès, de la protection des données et de la sécurisation des services hébergés.',
+        tags: ['Cloud', 'IAM', 'Microsoft Azure', 'Protection des données'],
         icon: Cloud,
       },
-
-      
+      {
+        title: 'Sécurité IoT et systèmes embarqués',
+        category: 'EXPÉRIENCE ET EXPLORATION',
+        description:
+          'Expérience avec des systèmes embarqués ESP32, la communication Wi-Fi et Bluetooth et les échanges avec un serveur local. Étude des enjeux de sécurité des objets connectés et de leurs communications.',
+        tags: ['ESP32', 'IoT', 'Wi-Fi', 'Bluetooth', 'HTTP'],
+        icon: Network,
+      },
       {
         title: 'Lo-mosso — Marketplace e-commerce',
         category: 'PROJET PERSONNEL',
         description:
-          'Développement d’un prototype fonctionnel de marketplace. Le projet utilise PHP, MySQL avec PDO, JavaScript et des échanges REST/JSON. Postman est utilisé dans l’environnement de travail.',
-        tags: ['PHP', 'CSS', 'JavaScript', 'MySQL', 'PDO', 'REST/JSON', 'Postman'],
+          'Développement d’un prototype de marketplace utilisant PHP, MySQL avec PDO et JavaScript. Le projet comprend des échanges REST/JSON et l’utilisation de Postman dans l’environnement de développement.',
+        tags: ['PHP', 'JavaScript', 'MySQL', 'PDO', 'REST/JSON', 'Postman'],
         icon: Code2,
       },
-
-      
-{
-  title: 'Morocco Smart Guide',
-  category: 'PROJET ACADÉMIQUE · IA',
-  description:
-    "Assistant touristique intelligent pour le Maroc, développé en équipe. Le projet combine une recherche sémantique avec FAISS, un système RAG pour le chatbot bilingue et un moteur de génération d’itinéraires personnalisés selon le budget, les intérêts et la durée du séjour.",
-  tags: [
-    'Python',
-    'FastAPI',
-    'Streamlit',
-    'FAISS',
-    'RAG',
-    'LangChain',
-    'Hugging Face',
-  ],
-  icon: BrainCircuit,
-},
-
-
+      {
+        title: 'Morocco Smart Guide',
+        category: 'PROJET ACADÉMIQUE · IA',
+        description:
+          'Assistant touristique intelligent pour le Maroc, développé en équipe. Le projet combine une recherche sémantique avec FAISS, un chatbot bilingue reposant sur une approche RAG et la génération d’itinéraires personnalisés selon le budget, les intérêts et la durée du séjour.',
+        tags: ['Python', 'FastAPI', 'Streamlit', 'FAISS', 'RAG', 'LangChain', 'Hugging Face'],
+        icon: BrainCircuit,
+      },
     ],
-    viewProfile: 'Voir mon profil',
-    contactTitle: 'La cybersécurité n’est pas seulement un métier, c’est une passion.',
+
+    contactTitle:
+      'La cybersécurité n’est pas seulement un métier, c’est une passion.',
     contactText:
-      "Vous souhaitez échanger autour de la cybersécurité, d'un projet ou d'une opportunité ? N'hésitez pas à me contacter.",
+      "Vous souhaitez échanger autour de la cybersécurité, d'un projet ou d'une opportunité de stage ? N'hésitez pas à me contacter.",
     emailBtn: 'Me contacter par e-mail',
-    footer: 'Cybersécurité',
+    footer: 'Cybersécurité · Réseaux · Systèmes · Protection des données',
     backTop: 'Retour en haut',
+    profileLabel: 'PROFIL',
+    terminalFocus: [
+      'network-security',
+      'systems-security',
+      'ethical-hacking',
+      'application-security',
+      'threat-detection',
+    ],
+    terminalMessage: 'APPRENDRE. CONSTRUIRE. SÉCURISER.',
+    portraitAlt: 'Portrait de Lionel TILENGAR',
+    contactLabel: 'CONTACT',
   },
+
   en: {
     nav: ['About', 'Experience', 'Skills', 'Projects', 'Contact'],
-    availability: 'Portfolio in progress',
+    availability: 'Seeking a final-year internship · January 2027',
     greeting: "HELLO, I'M",
-    firstName: 'TILENGAR',
-    lastName: 'Mbaihornom Lionel',
-    role: 'Cybersecurity Engineering',
+    firstName: 'Mbaihornom Lionel',
+    lastName: 'TILENGAR',
+    role: 'Cybersecurity Engineering Student · 5th year',
     description:
-      'Passionate about cybersecurity, networking, and artificial intelligence. I explore solutions that help strengthen the security of systems and applications.',
+      'Cybersecurity engineering student at the International University of Rabat, interested in protecting systems, networks, and applications against cyber threats. My background covers various cybersecurity fields: network security, systems security, web application security, cryptography, cloud, IoT, and AI-based intrusion detection. I am seeking a final-year internship starting in January 2027.',
     projectsBtn: 'Explore my projects',
     contactBtn: 'Get in touch',
-    aboutTitle: 'About me',
+
+    aboutTitle: 'About Me',
     aboutText:
-      'I am progressively developing my information security skills through hands-on projects, technical labs, and research. My goal is to contribute to building safer and more resilient digital systems.',
-    skillsTitle: 'Technical interests',
-    skillsSubtitle: 'Knowledge developed through hands-on practice.',
-    projectsTitle: 'Projects & explorations',
+      'I am a Computer Engineering student specializing in Cybersecurity at the International University of Rabat (UIR). I develop my skills through internships, practical projects, technical labs, and research. My goal is to contribute to protecting digital infrastructure, systems, data, and applications.',
+
+    education: 'Education',
+    educationItems: [
+      {
+        degree: 'Engineering Degree in Computer Science',
+        field: 'Cybersecurity Specialization · 5th year',
+        school: 'International University of Rabat (UIR)',
+        location: 'Rabat, Morocco',
+        date: '2022 – Present',
+      },
+      {
+        degree: 'Scientific Baccalaureate',
+        field: 'Science Stream D',
+        school: 'Collège Horizon International',
+        location: 'Ouagadougou, Burkina Faso',
+        date: '2021 – 2022',
+      },
+      {
+        degree: 'BEPC – Lower Secondary School Certificate',
+        field: 'Secondary Education',
+        school: 'Collège Horizon International',
+        location: 'Ouagadougou, Burkina Faso',
+        date: '2018 – 2019',
+      },
+    ],
+
+    experienceTitle: 'Professional Experience',
+    experienceOneTitle:
+      'Development and testing of an ESP32 embedded solution',
+    experienceOneDescription:
+      'Worked on an embedded system using Wi-Fi connectivity and communication with a local PHP server through HTTP GET requests. The work also involved displaying data on an HTML page and the serial monitor, configuring Wi-Fi through Bluetooth, and studying the fundamentals of over-the-air updates (OTA).',
+    experienceTwoTitle:
+      'Comparative study of network security solutions',
+    experienceTwoDescription:
+      'Studied network security solutions in the context of a banking infrastructure. Compared solutions such as FortiGate and FortiNAC, explored traffic filtering, inspection, and network segmentation, and proposed an adapted security architecture.',
+    internship: 'Internship',
+    embeddedSystems: 'IoT · Embedded Systems',
+    cybersecurityNetworking: 'Cybersecurity · Networking',
+    july2024: 'July 2024',
+    julyOctober2025: 'July – October 2025',
+
+    skillsTitle: 'Skills & Technical Areas',
+    skillsSubtitle:
+      'An overview of cybersecurity fields covered during my studies, internships, and practical assignments.',
+    toolsTitle: 'Tools & Technologies',
+
+    skills: [
+      'Network Security',
+      'Systems Security',
+      'Penetration Testing & Ethical Hacking',
+      'Web Application Security',
+      'Cryptography & Data Protection',
+      'Cloud Security',
+      'Security Monitoring & Threat Detection',
+      'Artificial Intelligence for Cybersecurity',
+      'IoT & Embedded Systems Security',
+    ],
+
+    projectsTitle: 'Projects, Research & Technical Areas',
     projectsSubtitle:
-      'A selection of technical areas and work I aim to showcase throughout my journey.',
-    items: [
+      'An overview of my academic projects, research work, and the different areas of cybersecurity I explore.',
+
+    projects: [
       {
         title: 'AI-based IoMT Intrusion Detection',
-        category: 'ARTIFICIAL INTELLIGENCE',
+        category: 'ONGOING RESEARCH',
         description:
-          'Exploring attack detection methods for Internet of Medical Things networks, with a focus on rare attacks and reducing false positives.',
-        tags: ['Python', 'Machine Learning', 'IoMT'],
+          'Study of artificial intelligence methods for detecting attacks in Internet of Medical Things networks. Topics include class imbalance, minority attack detection, and reducing false positives.',
+        tags: ['Python', 'Machine Learning', 'IoMT', 'Intrusion Detection'],
         icon: BrainCircuit,
       },
       {
         title: 'Network Security & Firewalls',
-        category: 'NETWORK SECURITY',
+        category: 'INTERNSHIP AND PRACTICAL WORK',
         description:
-          'Studying secure network architectures, firewall rules, traffic filtering, and network segmentation.',
-        tags: ['Networking', 'Firewall', 'VLAN', 'Fortinet','Postman'],
+          'Study of secure network architectures, traffic filtering, inspection, and network segmentation. Exploration of VLANs, firewalls, VPNs, DMZs, and network simulation environments.',
+        tags: ['Networking', 'FortiGate', 'FortiNAC', 'VLAN', 'GNS3', 'Cisco Packet Tracer'],
         icon: Network,
       },
       {
-        title: 'SOC Analysis & OpenSearch',
-        category: 'DETECTION & MONITORING',
+        title: 'Penetration Testing & Ethical Hacking',
+        category: 'PRACTICE AND LEARNING',
         description:
-          'Exploring security logs, building visualizations, and analyzing indicators to better understand network activity.',
-        tags: ['SOC', 'OpenSearch', 'Logs', 'Wireshark'],
-        icon: Activity,
+          'Exploration of security testing techniques in authorized lab environments, including reconnaissance, service analysis, vulnerability discovery, and web security testing.',
+        tags: ['Kali Linux', 'Nmap', 'Metasploit', 'Burp Suite', 'CTF'],
+        icon: LockKeyhole,
       },
       {
-        title: 'Secure Web Development',
-        category: 'APPLICATION SECURITY',
+        title: 'Web Application Security',
+        category: 'PROJECTS AND PRACTICAL WORK',
         description:
-          'Developing applications and exploring security practices that help protect data and access.',
-        tags: ['Web', 'Security', 'Development'],
+          'Web development and application protection, including user accounts, roles, and access control. Study of vulnerabilities such as XSS and CSRF in practical assignments.',
+        tags: ['PHP', 'HTML', 'CSS', 'JavaScript', 'XSS', 'CSRF'],
         icon: Code2,
       },
       {
-        title: 'Cloud & Application Security',
-        category: 'CLOUD SECURITY',
+        title: 'Systems Security',
+        category: 'TECHNICAL AREA',
         description:
-          'Exploring cloud hosting, access control, and data protection in modern applications.',
-        tags: ['Cloud', 'IAM', 'Data protection', 'Microsoft Azure'],
+          'Study of Linux and Windows security, permissions, services, system configurations, and approaches to system hardening.',
+        tags: ['Linux', 'Ubuntu', 'Kali Linux', 'Windows', 'Hardening'],
+        icon: Terminal,
+      },
+      {
+        title: 'Cryptography & Data Protection',
+        category: 'TECHNICAL AREA',
+        description:
+          'Study of confidentiality, integrity, authentication, and data protection principles, including cryptography and secure communications.',
+        tags: ['Cryptography', 'Integrity', 'Authentication', 'RSA'],
+        icon: ShieldCheck,
+      },
+      {
+        title: 'Security Monitoring & Threat Detection',
+        category: 'CYBERSECURITY FIELD',
+        description:
+          'Exploration of security event monitoring, log analysis, suspicious activity identification, and incident detection and response mechanisms.',
+        tags: ['SOC', 'Logs', 'Monitoring', 'Wireshark'],
+        icon: Activity,
+      },
+      {
+        title: 'Cloud Security & Access Control',
+        category: 'CYBERSECURITY FIELD',
+        description:
+          'Exploration of cloud security principles, identity and access management, data protection, and securing hosted services.',
+        tags: ['Cloud', 'IAM', 'Microsoft Azure', 'Data Protection'],
         icon: Cloud,
       },
-
-      
+      {
+        title: 'IoT & Embedded Systems Security',
+        category: 'EXPERIENCE AND EXPLORATION',
+        description:
+          'Experience with ESP32 embedded systems, Wi-Fi and Bluetooth communication, and exchanges with a local server. Study of security challenges affecting connected devices and their communications.',
+        tags: ['ESP32', 'IoT', 'Wi-Fi', 'Bluetooth', 'HTTP'],
+        icon: Network,
+      },
       {
         title: 'Lo-mosso — E-commerce Marketplace',
         category: 'PERSONAL PROJECT',
         description:
-          'Development of a functional marketplace prototype. The project uses PHP, MySQL with PDO, JavaScript, and REST/JSON exchanges. Postman is part of the development toolkit.',
-        tags: ['PHP', 'CSS', 'JavaScript', 'MySQL', 'PDO', 'REST/JSON', 'Postman'],
+          'Development of a marketplace prototype using PHP, MySQL with PDO, and JavaScript. The project includes REST/JSON exchanges and the use of Postman in the development environment.',
+        tags: ['PHP', 'JavaScript', 'MySQL', 'PDO', 'REST/JSON', 'Postman'],
         icon: Code2,
       },
-
-      
-
-{
-  title: 'Morocco Smart Guide',
-  category: 'ACADEMIC PROJECT · AI',
-  description:
-    'A team-developed intelligent travel assistant for Morocco. The project combines FAISS semantic search, a RAG-based bilingual chatbot, and a personalized itinerary generator that considers budget, interests, constraints, and trip duration.',
-  tags: [
-    'Python',
-    'FastAPI',
-    'Streamlit',
-    'FAISS',
-    'RAG',
-    'LangChain',
-    'Hugging Face',
-  ],
-  icon: BrainCircuit,
-},
-
-
+      {
+        title: 'Morocco Smart Guide',
+        category: 'ACADEMIC PROJECT · AI',
+        description:
+          'A team-developed intelligent travel assistant for Morocco. It combines FAISS semantic search, a bilingual RAG chatbot, and personalized itinerary generation based on budget, interests, and trip duration.',
+        tags: ['Python', 'FastAPI', 'Streamlit', 'FAISS', 'RAG', 'LangChain', 'Hugging Face'],
+        icon: BrainCircuit,
+      },
     ],
-    viewProfile: 'View my profile',
-    contactTitle: "Cybersecurity is not just a job, it's a passion.",
+
+    contactTitle:
+      'Cybersecurity is not just a profession, it is a passion.',
     contactText:
-      "Interested in discussing cybersecurity, a project, or an opportunity? Let's connect.",
+      'Interested in discussing cybersecurity, a project, or an internship opportunity? Feel free to contact me.',
     emailBtn: 'Contact me by email',
-    footer: 'Built with curiosity and a passion for cybersecurity.',
+    footer: 'Cybersecurity · Networking · Systems · Data Protection',
     backTop: 'Back to top',
+    profileLabel: 'PROFILE',
+    terminalFocus: [
+      'network-security',
+      'systems-security',
+      'ethical-hacking',
+      'application-security',
+      'threat-detection',
+    ],
+    terminalMessage: 'LEARN. BUILD. SECURE.',
+    portraitAlt: 'Portrait of Lionel TILENGAR',
+    contactLabel: 'CONTACT',
   },
 }
 
-const skills = [
-  { label: 'Cybersecurity', icon: ShieldCheck },
-  { label: 'Network Security', icon: Network },
-  { label: 'AI & Machine Learning', icon: BrainCircuit },
-  { label: 'SOC & Monitoring', icon: Activity },
-  { label: 'Secure Development', icon: Code2 },
-  { label: 'Cloud Security', icon: Cloud },
+const technicalTools = [
+  'Linux',
+  'Ubuntu',
+  'Kali Linux',
+  'Wireshark',
+  'Nmap',
+  'Metasploit',
+  'Burp Suite',
+  'FortiGate',
+  'FortiNAC',
+  'GNS3',
+  'Cisco Packet Tracer',
+  'VMware',
+  'HTML',
+  'PHP',
+  'Python',
+  'C',
+  'MySQL',
+  'ESP32',
+  'Arduino IDE',
+]
+
+const skillIcons = [
+  Network,
+  ShieldCheck,
+  LockKeyhole,
+  Code2,
+  LockKeyhole,
+  Cloud,
+  Activity,
+  BrainCircuit,
+  Terminal,
 ]
 
 export default function App() {
   const [lang, setLang] = useState('fr')
   const [menuOpen, setMenuOpen] = useState(false)
-  const t = content[lang]
 
- const navIds = [
-  'about',
-  'experience',
-  'skills',
-  'projects',
-  'contact',
-]
+  const t = content[lang]
+  console.log('Langue :', lang)
+console.log('Titre :', t.aboutTitle)
+  const navIds = ['about', 'experience', 'skills', 'projects', 'contact']
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#070b14] text-slate-200">
+      {/* NAVIGATION */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070b14]/90 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#home" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10">
               <ShieldCheck className="text-cyan-300" size={23} />
             </div>
+
             <div>
               <p className="font-mono text-sm font-bold tracking-wider text-white">
                 TILENGAR<span className="text-cyan-400">.SEC</span>
@@ -272,16 +473,14 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-3">
-            
-<button
-  onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-  className="flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 text-xs font-bold transition hover:border-cyan-400/50 hover:text-cyan-300"
-  aria-label="Change language"
->
-  <Globe size={15} />
-  {lang === 'fr' ? 'FR | EN' : 'EN | FR'}
-</button>
-
+            <button
+              onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
+              className="flex items-center gap-2 rounded-lg border border-white/10 px-3 py-2 text-xs font-bold transition hover:border-cyan-400/50 hover:text-cyan-300"
+              aria-label="Change language"
+            >
+              <Globe size={15} />
+              {lang === 'fr' ? 'FR | EN' : 'EN | FR'}
+            </button>
 
             <button
               className="rounded-lg border border-white/10 p-2 md:hidden"
@@ -311,6 +510,7 @@ export default function App() {
       </header>
 
       <main>
+        {/* HOME */}
         <section
           id="home"
           className="relative mx-auto flex min-h-[82vh] max-w-7xl items-center px-5 py-20 lg:px-8"
@@ -351,6 +551,7 @@ export default function App() {
                   {t.projectsBtn}
                   <ArrowRight size={17} />
                 </a>
+
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-5 py-3.5 text-sm font-semibold text-white transition hover:border-cyan-400/50 hover:text-cyan-300"
@@ -369,6 +570,7 @@ export default function App() {
                 >
                   <Code2 size={20} />
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/lionel-tilengar-ab3961319"
                   target="_blank"
@@ -377,6 +579,14 @@ export default function App() {
                   className="rounded-xl border border-white/10 p-3 text-slate-400 transition hover:border-cyan-400/50 hover:text-cyan-300"
                 >
                   <Code2 size={20} />
+                </a>
+
+                <a
+                  href="mailto:lioneltilengar61@gmail.com"
+                  aria-label="Email"
+                  className="rounded-xl border border-white/10 p-3 text-slate-400 transition hover:border-cyan-400/50 hover:text-cyan-300"
+                >
+                  <Mail size={20} />
                 </a>
               </div>
             </div>
@@ -391,7 +601,9 @@ export default function App() {
                     profile.sh
                   </span>
                 </div>
+
                 <Terminal className="mb-5 text-cyan-300" size={30} />
+
                 <p className="font-mono text-sm leading-8">
                   <span className="text-emerald-400">$</span>{' '}
                   <span className="text-cyan-200">whoami</span>
@@ -402,21 +614,20 @@ export default function App() {
                   <span className="text-cyan-200">cat focus.txt</span>
                   <br />
                   <span className="text-slate-400">
-                    cybersecurity
-                    <br />
-                    network-defense
-                    <br />
-                    ai-intrusion-detection
-                    <br />
-                    secure-development
+                    {t.terminalFocus.map((item) => (
+                      <span key={item}>
+                        {item}
+                        <br />
+                      </span>
+                    ))}
                   </span>
-                  <br />
                   <span className="text-emerald-400">$</span>{' '}
                   <span className="animate-pulse text-cyan-300">_</span>
                 </p>
+
                 <div className="mt-7 rounded-xl border border-emerald-400/15 bg-emerald-400/5 p-4">
                   <p className="font-mono text-xs text-emerald-300">
-                    {'>'} LEARN. BUILD. SECURE.
+                    {'>'} {t.terminalMessage}
                   </p>
                 </div>
               </div>
@@ -424,188 +635,243 @@ export default function App() {
           </div>
         </section>
 
-       
-<section id="about" className="border-t border-white/5 bg-white/[0.02]">
-  <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-    <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
-      01 / PROFILE
-    </p>
+        {/* ABOUT AND EDUCATION */}
+        <section id="about" className="border-t border-white/5 bg-white/[0.02]">
+          <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+            <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
+              01 / {t.profileLabel}
+            </p>
 
-    <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_280px]">
-      <div>
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">
-          {t.aboutTitle}
-          
-        </h2>
+            <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[1fr_280px]">
+              <div>
+                <h2 className="text-3xl font-bold text-white sm:text-4xl">
+                  {t.aboutTitle}
+                </h2>
 
-        <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400">
-          {t.aboutText}
-        </p>
-      </div>
+                <p className="mt-6 max-w-3xl text-base leading-8 text-slate-400">
+                  {t.aboutText}
+                </p>
 
-      
-<div className="flex justify-center">
-  <img
-    src={`${import.meta.env.BASE_URL}images/lionel.jfif`}
-    alt="Portrait professionnel"
-    className="h-64 w-64 rounded-2xl border border-cyan-400/30 object-cover object-top shadow-lg shadow-cyan-950/30"
-  />
-</div>
+                <div className="mt-10">
+                  <h3 className="mb-6 flex items-center gap-3 text-xl font-bold text-white">
+                    <GraduationCap className="text-cyan-300" size={25} />
+                    {t.education}
+                  </h3>
 
-    </div>
-  </div>
-</section>
+                  <div className="space-y-4">
+                    {t.educationItems.map((item) => (
+                      <article
+                        key={item.date}
+                        className="rounded-2xl border border-white/10 bg-[#0b1220] p-5"
+                      >
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                          <div>
+                            <h4 className="font-semibold text-white">
+                              {item.degree}
+                            </h4>
+                            <p className="mt-1 text-sm text-cyan-300">
+                              {item.field}
+                            </p>
+                          </div>
 
+                          <span className="w-fit rounded-lg border border-white/10 px-3 py-2 text-xs text-slate-400">
+                            {item.date}
+                          </span>
+                        </div>
 
-        
-<section
-  id="experience"
-  className="border-t border-white/5 bg-white/[0.02]"
->
-  <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-    <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
-      02 / EXPERIENCE
-    </p>
-
-    <h2 className="text-3xl font-bold text-white sm:text-4xl">
-      {lang === 'fr'
-        ? 'Expérience professionnelle'
-        : 'Professional Experience'}
-    </h2>
-
-            
-
-<article className="mt-6 rounded-2xl border border-white/10 bg-[#0b1220] p-6 sm:p-8">
-  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-    <div>
-      <p className="font-mono text-sm text-cyan-300">PIGMA SYSTEM</p>
-
-      <h3 className="mt-2 text-xl font-bold text-white">
-        {lang === 'fr'
-          ? 'Développement d’une solution OTA sécurisée pour ESP32'
-          : 'Development of a Secure OTA Solution for ESP32'}
-      </h3>
-
-      <p className="mt-2 text-sm text-slate-400">
-        {lang === 'fr'
-          ? 'IoT · Systèmes embarqués'
-          : 'IoT · Embedded Systems'}
-      </p>
-    </div>
-
-    <span className="w-fit rounded-lg border border-white/10 px-3 py-2 text-xs text-slate-400">
-      01/07/2024 – 28/07/2024
-    </span>
-  </div>
-
-  <p className="mt-5 leading-7 text-slate-400">
-    {lang === 'fr'
-      ? 'Développement et tests d’un système embarqué basé sur ESP32 pour la connexion Wi-Fi, la communication avec un serveur PHP local via des requêtes HTTP GET et l’affichage des données sur une page HTML et le moniteur série. Le travail a également porté sur la sélection des réseaux Wi-Fi via Bluetooth et sur les bases de la mise à jour de programmes à distance (OTA).'
-      : 'Development and testing of an ESP32-based embedded system for Wi-Fi connectivity, communication with a local PHP server through HTTP GET requests, and data display on an HTML page and the serial monitor. The work also covered Wi-Fi network selection through Bluetooth and the foundations of over-the-air (OTA) program updates.'}
-  </p>
-
-  <div className="mt-6 flex flex-wrap gap-2">
-    {[
-      'ESP32',
-      'IoT',
-      'C/C++',
-      'Wi-Fi',
-      'Bluetooth',
-      'PHP',
-      'HTTP GET',
-      'HTML',
-      'OTA',
-    ].map((tag) => (
-      <span
-        key={tag}
-        className="rounded-md border border-cyan-400/15 bg-cyan-400/5 px-3 py-1.5 text-xs text-cyan-200"
-      >
-        {tag}
-      </span>
-    ))}
-  </div>
-</article>
-
-
-    <article className="mt-10 rounded-2xl border border-white/10 bg-[#0b1220] p-6 sm:p-8">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-        <div>
-          <p className="font-mono text-sm text-cyan-300">ACXS IT</p>
-
-          <h3 className="mt-2 text-xl font-bold text-white">
-            {lang === 'fr'
-              ? 'Étude comparative de solutions de sécurité réseau'
-              : 'Comparative Study of Network Security Solutions'}
-          </h3>
-        </div>
-
-        <span className="w-fit rounded-lg border border-white/10 px-3 py-2 text-xs text-slate-400">
-          01/07/2025 – 30/10/2025
-        </span>
-      </div>
-
-      <p className="mt-5 leading-7 text-slate-400">
-        {lang === 'fr'
-          ? "Étude de solutions de sécurité réseau pour un environnement bancaire, avec comparaison de pare-feu et étude d’une architecture de sécurité. Le travail comprend également une simulation réseau avec GNS3."
-          : "Study of network security solutions for a banking environment, including firewall comparison and security architecture analysis. The work also includes network simulation using GNS3."}
-      </p>
-
-      <div className="mt-6 flex flex-wrap gap-2">
-        {['FortiGate', 'FortiNAC', 'GNS3', 'Network Security'].map(
-          (tag) => (
-            <span
-              key={tag}
-              className="rounded-md border border-cyan-400/15 bg-cyan-400/5 px-3 py-1.5 text-xs text-cyan-200"
-            >
-              {tag}
-            </span>
-          )
-        )}
-      </div>
-    </article>
-  </div>
-</section>
-
-
-        <section id="skills" className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-          <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
-            02 / EXPERTISE
-          </p>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            {t.skillsTitle}
-          </h2>
-          <p className="mt-4 text-slate-400">{t.skillsSubtitle}</p>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {skills.map(({ label, icon: Icon }) => (
-              <div
-                key={label}
-                className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-cyan-400/[0.04]"
-              >
-                <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 p-3">
-                  <Icon className="text-cyan-300" size={23} />
+                        <p className="mt-4 text-sm text-slate-300">
+                          {item.school}
+                        </p>
+                        <p className="mt-1 text-sm text-slate-500">
+                          {item.location}
+                        </p>
+                      </article>
+                    ))}
+                  </div>
                 </div>
-                <span className="font-medium text-slate-200">{label}</span>
               </div>
-            ))}
+
+              <div className="flex justify-center md:pt-12">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/lionel.jfif`}
+                  alt={t.portraitAlt}
+                  className="h-64 w-64 rounded-2xl border border-cyan-400/30 object-cover object-top shadow-lg shadow-cyan-950/30"
+                  onError={(event) => {
+                    event.currentTarget.style.display = 'none'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </section>
 
-        <section id="projects" className="border-y border-white/5 bg-white/[0.02]">
+        {/* EXPERIENCE */}
+        <section
+          id="experience"
+          className="border-t border-white/5 bg-[#070b14]"
+        >
           <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
             <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
-              03 / SELECTED WORK
+              02 / EXPERIENCE
             </p>
+
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
+              {t.experienceTitle}
+            </h2>
+
+            <div className="mt-10 space-y-6">
+              <article className="rounded-2xl border border-white/10 bg-[#0b1220] p-6 sm:p-8">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="font-mono text-sm text-cyan-300">
+                      PIGMA SYSTEM
+                    </p>
+
+                    <h3 className="mt-2 text-xl font-bold text-white">
+                      {t.experienceOneTitle}
+                    </h3>
+
+                    <p className="mt-2 text-sm text-slate-400">
+                      {t.embeddedSystems}
+                    </p>
+                  </div>
+
+                  <span className="w-fit rounded-lg border border-white/10 px-3 py-2 text-xs text-slate-400">
+                    {t.july2024}
+                  </span>
+                </div>
+
+                <p className="mt-5 leading-7 text-slate-400">
+                  {t.experienceOneDescription}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {['ESP32', 'Wi-Fi', 'Bluetooth', 'PHP', 'HTTP GET', 'HTML', 'OTA'].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-md border border-cyan-400/15 bg-cyan-400/5 px-3 py-1.5 text-xs text-cyan-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+
+              <article className="rounded-2xl border border-white/10 bg-[#0b1220] p-6 sm:p-8">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="font-mono text-sm text-cyan-300">ACXS IT</p>
+
+                    <h3 className="mt-2 text-xl font-bold text-white">
+                      {t.experienceTwoTitle}
+                    </h3>
+
+                    <p className="mt-2 text-sm text-slate-400">
+                      {t.cybersecurityNetworking}
+                    </p>
+                  </div>
+
+                  <span className="w-fit rounded-lg border border-white/10 px-3 py-2 text-xs text-slate-400">
+                    {t.julyOctober2025}
+                  </span>
+                </div>
+
+                <p className="mt-5 leading-7 text-slate-400">
+                  {t.experienceTwoDescription}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {['FortiGate', 'FortiNAC', 'GNS3', 'VLAN', 'Network Security'].map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-md border border-cyan-400/15 bg-cyan-400/5 px-3 py-1.5 text-xs text-cyan-200"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* SKILLS */}
+        <section
+          id="skills"
+          className="border-t border-white/5 bg-white/[0.02]"
+        >
+          <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+            <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
+              03 / SKILLS
+            </p>
+
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
+              {t.skillsTitle}
+            </h2>
+
+            <p className="mt-4 text-slate-400">{t.skillsSubtitle}</p>
+
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {t.skills.map((label, index) => {
+                const Icon = skillIcons[index]
+
+                return (
+                  <div
+                    key={label}
+                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-cyan-400/[0.04]"
+                  >
+                    <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 p-3">
+                      <Icon className="text-cyan-300" size={23} />
+                    </div>
+                    <span className="font-medium text-slate-200">
+                      {label}
+                    </span>
+                  </div>
+                )
+              })}
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-xl font-bold text-white">
+                {t.toolsTitle}
+              </h3>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {technicalTools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-lg border border-white/10 bg-[#0b1220] px-3 py-2 text-sm text-slate-300 transition hover:border-cyan-400/30 hover:text-cyan-200"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PROJECTS */}
+        <section
+          id="projects"
+          className="border-y border-white/5 bg-[#070b14]"
+        >
+          <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+            <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
+              04 / PROJECTS & EXPLORATIONS
+            </p>
+
             <h2 className="text-3xl font-bold text-white sm:text-4xl">
               {t.projectsTitle}
             </h2>
+
             <p className="mt-4 max-w-2xl leading-7 text-slate-400">
               {t.projectsSubtitle}
             </p>
 
             <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {t.items.map((project, index) => {
+              {t.projects.map((project, index) => {
                 const Icon = project.icon
+
                 return (
                   <article
                     key={project.title}
@@ -615,19 +881,24 @@ export default function App() {
                       <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 p-3">
                         <Icon className="text-cyan-300" size={25} />
                       </div>
+
                       <span className="font-mono text-xs text-slate-600">
-                        0{index + 1}
+                        {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
+
                     <p className="mb-3 text-[10px] font-bold tracking-[0.17em] text-cyan-400">
                       {project.category}
                     </p>
+
                     <h3 className="text-lg font-bold text-white">
                       {project.title}
                     </h3>
+
                     <p className="mt-4 flex-1 text-sm leading-7 text-slate-400">
                       {project.description}
                     </p>
+
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
@@ -645,44 +916,61 @@ export default function App() {
           </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+        {/* CONTACT */}
+        <section
+          id="contact"
+          className="mx-auto max-w-7xl px-5 py-24 lg:px-8"
+        >
           <div className="relative overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/[0.09] to-[#0b1220] p-8 sm:p-12 lg:p-16">
             <div className="relative max-w-3xl">
               <p className="mb-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
-                04 / CONTACT
+                05 / {t.contactLabel}
               </p>
+
               <h2 className="text-3xl font-bold text-white sm:text-5xl">
                 {t.contactTitle}
               </h2>
+
               <p className="mt-5 max-w-2xl leading-8 text-slate-400">
                 {t.contactText}
               </p>
+
               <a
-                href="https://www.linkedin.com/in/lionel-tilengar-ab3961319"
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:lioneltilengar61@gmail.com"
                 className="mt-8 inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3.5 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
               >
                 <Mail size={17} />
-                {t.contactBtn}
+                {t.emailBtn}
                 <ArrowRight size={17} />
               </a>
+
               <div className="mt-7 flex flex-wrap gap-5 text-sm text-slate-400">
+                <a
+                  href="mailto:lioneltilengar61@gmail.com"
+                  className="inline-flex items-center gap-2 hover:text-cyan-300"
+                >
+                  <Mail size={17} />
+                  lioneltilengar61@gmail.com
+                </a>
+
                 <a
                   href="https://github.com/LionelTDTILE"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 hover:text-cyan-300"
                 >
-                  <Code2 size={20} /> GitHub
+                  <Code2 size={19} />
+                  GitHub
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/lionel-tilengar-ab3961319"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 hover:text-cyan-300"
                 >
-                  <Code2 size={17} /> LinkedIn
+                  <Code2 size={17} />
+                  LinkedIn
                 </a>
               </div>
             </div>
@@ -690,14 +978,21 @@ export default function App() {
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-7 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>
-            © {new Date().getFullYear()} TILENGAR Mbaihornom Lionel
+            © {new Date().getFullYear()} Mbaihornom Lionel TILENGAR
           </p>
+
           <p>{t.footer}</p>
-          <a href="#home" className="inline-flex items-center gap-1 hover:text-cyan-300">
-            {t.backTop} <ArrowDown className="rotate-180" size={13} />
+
+          <a
+            href="#home"
+            className="inline-flex items-center gap-1 hover:text-cyan-300"
+          >
+            {t.backTop}
+            <ArrowDown className="rotate-180" size={13} />
           </a>
         </div>
       </footer>
